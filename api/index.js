@@ -6,7 +6,7 @@ const model = require('./sdk/model.js');
 
 // Bot Setting
 const TelegramBot = require('node-telegram-bot-api');
-const token = '1822860103:AAEyvoRhuqJGpyhwIta7xgwWRojP4MJSlOQ'
+const token = '1916793278:AAEb_cd8Mdkapdq057pDBb4F_vibNhG8IG4'
 const bot = new TelegramBot(token, {polling: true});
 
 
@@ -16,7 +16,6 @@ bot.onText(/\/start/, (msg) => {
     bot.sendMessage(
         msg.chat.id,
         `hello ${msg.chat.first_name}, welcome...\n
-        Selamat datang di bot UAS islahuddin
         click /predict`
     );   
 });
@@ -25,7 +24,7 @@ state = 0
 bot.onText(/\/predict/, (msg) => { 
     bot.sendMessage(
         msg.chat.id,
-        `input nilai x1|x2|x3 contohnya 27|21|81 (sesuai dengan nilai pada dataset)`
+        `input nilai x1|x2|x3 sesuai dengan nilai pada dataset`
     );   
     state = 1;
 });
